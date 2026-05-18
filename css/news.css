@@ -31,6 +31,7 @@
 .news-titles h1 { margin: 0; font-size: 28px; color: var(--dark-blue); }
 .news-titles p  { margin: 5px 0 0; color: var(--gray-text); }
 
+/* Grid Sistem Utama - Berbasis 3 Kolom */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -51,22 +52,6 @@
 
 .card-image { position: relative; height: 200px; }
 .card-image img { width: 100%; height: 100%; object-fit: cover; }
-
-.tag {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 11px;
-    font-weight: bold;
-    color: white;
-}
-
-.awareness { background: #4a90e2; }
-.education  { background: #6da1d2; }
-.research   { background: #2c3e50; }
-.parenting  { background: #f794ac; }
 
 .card-content {
     padding: 20px;
@@ -90,11 +75,24 @@
 .meta-data {
     margin-top: auto;
     font-size: 12px;
-    color: #999;
+    color: #888;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
     margin-bottom: 15px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.meta-item img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+    opacity: 0.7;
 }
 
 .read-more {
@@ -103,9 +101,69 @@
     font-weight: bold;
     font-size: 14px;
     transition: 0.3s;
+    display: inline-block;
 }
 
 .read-more:hover { 
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+@media (max-width: 992px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-page {
+        padding: 25px 0;
+    }
+
+    .news-header-card {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .news-info {
+        flex-direction: column; 
+        text-align: center;    
+        gap: 15px;
+    }
+
+    .news-titles h1 {
+        font-size: 1.6rem; 
+    }
+
+    .news-titles p {
+        font-size: 0.9rem;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .news-card {
+        border-radius: 15px; 
+    }
+
+    .card-image {
+        height: 180px; 
+    }
+
+    .card-content {
+        padding: 15px; 
+    }
+
+    .card-content h3 {
+        font-size: 1.1rem; 
+        margin-bottom: 8px;
+    }
+
+    .card-content p {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
 }
