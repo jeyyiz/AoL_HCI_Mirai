@@ -1,0 +1,317 @@
+.home-page .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 8%;
+    background: #f0f6ff;
+    min-height: 420px;
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 520px;
+}
+
+.hero-content h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1a202c;
+    line-height: 1.25;
+    margin: 0 0 16px;
+}
+
+.hero-content p {
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 0 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--gray-text);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.badge img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 420px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 400px;
+    object-fit: contain;
+}
+
+.services { 
+    padding: 60px 8%; 
+    background: var(--white); 
+}
+
+.section-title { 
+    text-align: center; 
+    margin-bottom: 40px; 
+}
+
+.section-title h2 { 
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    color: #1a202c; 
+    margin-bottom: 8px; 
+}
+
+.section-title p { 
+    color: var(--gray-text); 
+    font-size: 0.95rem; 
+}
+
+.home-page .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.home-page .services-grid .service-card:nth-child(4) { grid-column: 1; }
+.home-page .services-grid .service-card:nth-child(5) { grid-column: 2; }
+
+.service-card {
+    background: var(--white);
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.icon-box img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+}
+
+.blue-soft   { background: #dbeafe; color: #4a90e2; }
+.purple-soft { background: #ede9fe; color: #9b51e0; }
+.green-soft  { background: #dcfce7; color: #27ae60; }
+.orange-soft { background: #ffedd5; color: #e67e22; }
+.pink-soft   { background: #fce7f3; color: #e91e63; }
+
+.service-card h3 { font-size: 1rem; font-weight: 700; color: #1a202c; margin: 0 0 8px; }
+.service-card p  { font-size: 0.875rem; color: var(--gray-text); line-height: 1.6; margin: 0 0 16px; }
+
+.explore-link {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.explore-link:hover { 
+    text-decoration: underline; 
+}
+
+.about-blue {
+    width: 100%;
+    background: transparent;
+    padding: 10px 20px; 
+    box-sizing: border-box;
+}
+
+.about-blue-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px; 
+    
+    width: 100%;
+    max-width: 1100px;   
+    margin: 0 auto;      
+    padding: 40px 60px;  
+    
+    background: #e0ecfb; 
+    border-radius: 20px; 
+    box-sizing: border-box;
+}
+
+.about-blue-image {
+    flex: 1;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-blue-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.about-blue-content { 
+    flex: 1.2; 
+}
+
+.about-blue-content h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1a202c;
+    margin: 0 0 16px;
+}
+
+.about-blue-content p {
+    color: #4a5568;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0 0 28px;
+}
+
+.btn-primary {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    background: #77A7D9;    
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--dark-blue);
+    border: 2px solid var(--primary-blue);
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.btn-outline:hover {
+    background: transparent;
+    color: var(--dark-blue);
+    border-color: #000;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .home-page .hero {
+        flex-direction: column;
+        padding: 50px 24px;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .hero-content {
+        max-width: 100%;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-image { 
+        justify-content: center; 
+        max-width: 100%;
+        width: 80%;
+    }
+    
+    .hero-buttons { 
+        justify-content: center; 
+        gap: 15px;
+    }
+    
+    .hero-badges { 
+        justify-content: center; 
+        gap: 25px;
+    }
+
+    .services { 
+        padding: 50px 24px; 
+    }
+    
+    .home-page .services-grid { 
+        grid-template-columns: 1fr; 
+        gap: 16px;
+    }
+    
+    .home-page .services-grid .service-card:nth-child(4),
+    .home-page .services-grid .service-card:nth-child(5) { 
+        grid-column: auto; 
+    }
+
+    .about-blue { 
+        padding: 40px 20px; 
+    }
+    
+    .about-blue-inner { 
+        flex-direction: column; 
+        text-align: center; 
+        gap: 30px;
+        padding: 40px 24px; 
+    }
+    
+    .about-blue-image {
+        max-width: 260px;
+    }
+    
+    .about-blue-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .about-blue-content p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+}
