@@ -13,13 +13,19 @@
 .icon-circle-large {
     width: 60px;
     height: 60px;
-    background: #eef4ff;
+    background: #5B8EC4;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 30px;
     flex-shrink: 0;
+}
+
+.icon-circle-large img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
 }
 
 .news-titles h1 { margin: 0; font-size: 28px; color: var(--dark-blue); }
@@ -27,7 +33,7 @@
 
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 
@@ -99,4 +105,7 @@
     transition: 0.3s;
 }
 
-.read-more:hover { padding-left: 5px; }
+.read-more:hover { 
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
