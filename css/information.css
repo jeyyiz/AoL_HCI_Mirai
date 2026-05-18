@@ -127,7 +127,7 @@
 .info-box-content ul {
   margin: 0;
   padding-left: 20px;
-  padding-top: 15px; /* Jarak pas setelah di-expand */
+  padding-top: 15px; 
   color: var(--gray-text, #718096);
   font-size: 16px;
 }
