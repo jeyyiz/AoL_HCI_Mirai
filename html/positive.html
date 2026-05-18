@@ -1,0 +1,118 @@
+<!-- result -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result - Mirai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/result.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="logo-mirai.png" alt="Mirai Logo">
+                <span>Mirai</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="screening.html" class="nav-active">Autism Test</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="therapists.html">Therapists</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+            <a href="signin.html" class="btn-signin">Sign In</a>
+        </nav>
+    </header>
+
+    <main class="result-page">
+        <div class="container">
+
+            <!-- Main Result Card -->
+            <div class="result-card">
+                <div class="result-header">
+                    <div class="result-icon">⚠️</div>
+                    <h1>Assessment Complete</h1>
+                    <p class="result-subtitle">Your screening result</p>
+                </div>
+
+                <div class="classification-box">
+                    <span class="classification-label">Classification</span>
+                    <span class="classification-value classification-value--high">Higher Risk</span>
+                </div>
+
+                <div class="interpretation-section">
+                    <h3>Interpretation</h3>
+                    <p>The screening indicates multiple characteristics commonly associated with autism spectrum disorder (ASD). We strongly recommend seeking a professional evaluation from a qualified healthcare provider or autism specialist for accurate diagnosis and support.</p>
+
+                    <div class="important-notice">
+                        <div class="notice-header">
+                            <span>ℹ️</span>
+                            <strong>Important Notice</strong>
+                        </div>
+                        <p>This screening tool provides general information only and is not a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of qualified health providers with questions regarding autism or any medical condition.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Steps Card -->
+            <div class="result-card next-steps-card">
+                <h3>Recommended Next Steps</h3>
+                <ol class="next-steps-list">
+                    <li>Consult with your primary care physician or pediatrician to discuss your concerns.</li>
+                    <li>Browse our <span class="text-blue">therapist directory</span> to find qualified specialists in your area.</li>
+                    <li>Learn more about autism through our <span class="text-blue">information resources</span>.</li>
+                    <li>Join our <span class="text-blue">community forum</span> to connect with others and share experiences.</li>
+                </ol>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="result-actions">
+                <button class="btn-result" onclick="location.href='therapists.html'">Find Therapists</button>
+                <button class="btn-result" onclick="location.href='information.html'">Learn More About Autism</button>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="logo-mirai.png" alt="Mirai Logo">
+                    <span>Mirai</span>
+                </div>
+                <p class="brand-subtitle">Autism Online Learning</p>
+                <p class="brand-desc">Supporting autism awareness, screening, and community connection.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="screening.html">Autism Test</a></li>
+                    <li><a href="information.html">Information</a></li>
+                    <li><a href="therapists.html">Therapists</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="forum.html">Forum</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Contact Us</h4>
+                <p>📧 support@mirai-autism.org</p>
+                <p>📍 Jakarta Barat, Indonesia</p>
+                <p>📞 +62 123-4567-8911</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mirai - Autism Online Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

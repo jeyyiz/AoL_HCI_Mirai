@@ -1,0 +1,175 @@
+/* --- GLOBAL & VARIABLES --- */
+:root {
+    --primary-blue: #6da1d2;
+    --dark-blue: #2c3e50;
+    --light-bg: #DCE7F4;
+    --gray-text: #666;
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Inter';
+    margin: 0;
+    background-color: var(--light-bg);
+    color: var(--dark-blue);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- NAVBAR --- */
+header {
+    position: sticky;      /* Pindahkan sticky ke elemen paling luar */
+    top: 0;
+    z-index: 1000;         /* Memastikan berada di lapisan paling atas */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--white);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+.logo img { height: 35px; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gray-text);
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover { color: var(--primary-blue); }
+
+
+.nav-active{
+    color: var(--dark-blue) !important;
+    font-weight: 700 !important;
+    padding: 6px 0;
+    border-bottom: 2px solid var(--dark-blue);
+}
+
+.btn-signin {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+}
+
+.btn-signin:hover {
+    background-color: #4a78b0;
+    transform: translateY(-1px);
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 50px 0 20px;
+    border-top: 1px solid #eee;
+    background: var(--white);
+}
+
+.footer-container {
+    display: grid;  
+    grid-template-columns: 40% 25% auto; 
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+.footer-brand .brand-subtitle { font-weight: bold; color: #888; margin: 5px 0; }
+.footer-brand .brand-desc { max-width: 300px; font-size: 13px; color: #aaa; }
+.footer-column h4 { color: var(--dark-blue); margin-bottom: 10px; }
+.footer-column ul { list-style: none; padding: 0; margin: 0; }
+.footer-column ul li { margin-bottom: 6px; }
+.footer-column ul a { text-decoration: none; color: #666; font-size: 14px; transition: 0.2s; }
+.footer-column ul a:hover { color: var(--primary-blue); }
+.footer-column p { font-size: 14px; color: #666; margin: 4px 0; }
+.footer-bottom { text-align: center; margin-top: 40px; color: #ccc; font-size: 12px; border-top: 1px solid #f0f0f0; padding-top: 20px; }
+
+/* --- BUTTONS --- */
+.btn-primary {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    background: #4a78b0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 217, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--dark-blue);
+    border: 2px solid var(--primary-blue);
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.btn-outline:hover {
+    background: var(--dark-blue);
+    color: var(--white);
+    border-color: var(--dark-blue);
+    transform: translateY(-2px);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .home-page .hero {
+        flex-direction: column;
+        padding: 40px 24px;
+        text-align: center;
+    }
+    .hero-image { justify-content: center; }
+    .hero-buttons { justify-content: center; }
+    .hero-badges { justify-content: center; }
+    .services { padding: 40px 24px; }
+    .home-page .services-grid { grid-template-columns: 1fr; }
+    .home-page .services-grid .service-card:nth-child(4),
+    .home-page .services-grid .service-card:nth-child(5) { grid-column: 1; }
+    .about-blue { padding: 40px 24px; }
+    .about-blue-inner { flex-direction: column; text-align: center; }
+}
