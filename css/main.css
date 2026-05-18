@@ -124,6 +124,21 @@ footer {
 .footer-column p { font-size: 14px; color: #666; margin: 4px 0; }
 .footer-bottom { text-align: center; margin-top: 40px; color: #ccc; font-size: 12px; border-top: 1px solid #f0f0f0; padding-top: 20px; }
 
+/* Menyejajarkan ikon gambar dengan teks */
+.footer-column .contact-item {
+    display: flex;
+    align-items: center; /* Membuat gambar dan teks sejajar vertikal di tengah */
+    gap: 10px;           /* Memberi jarak antara gambar ikon dan teks */
+    margin: 8px 0;       /* Memberi jarak antar baris */
+}
+
+/* Mengatur ukuran ikon agar pas dengan ukuran font */
+.footer-column .contact-item img {
+    width: 18px;         /* Lebar ikon */
+    height: 18px;        /* Tinggi ikon */
+    object-fit: contain; /* Menjaga proporsi gambar ikon agar tidak gepeng */
+}
+
 /* --- BUTTONS --- */
 .btn-primary {
     background: var(--primary-blue);
