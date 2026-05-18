@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Therapist - Mirai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/therapists.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/assets/icons/logo-mirai.PNG" alt="Mirai Logo">
+                <span>Mirai</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="screening.html">Autism Test</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="therapists.html" class="nav-active">Therapists</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+            <a href="signin.html" class="btn-signin">Sign In</a>
+        </nav>
+    </header>
+
+    <main class="therapist-page">
+        <div class="container">
+
+            <!-- Header & Filter Section -->
+            <section class="therapist-header">
+                <div class="header-flex">
+                    <div class="icon-circle">
+                        <img src="/assets/icons/therapist-icon.png" alt="therapist" class="section-icon">
+                    </div>
+                    <div>
+                        <h1 style="margin:0;">Find a Therapist</h1>
+                        <p style="margin:0; color:var(--gray-text);">Browse qualified autism specialists in your area</p>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <div class="filter-label">
+                        <img src="/assets/icons/filter.png" class="filter-icon" alt="filter">
+                        <span>Filter by:</span>
+                    </div>
+                    <button class="filter-btn active" onclick="filterBy('all', this)">All Regions</button>
+                    <button class="filter-btn" onclick="filterBy('jakarta', this)">Jakarta</button>
+                    <button class="filter-btn" onclick="filterBy('bogor', this)">Bogor</button>
+                    <button class="filter-btn" onclick="filterBy('depok', this)">Depok</button>
+                    <button class="filter-btn" onclick="filterBy('tangerang', this)">Tangerang</button>
+                    <button class="filter-btn" onclick="filterBy('bekasi', this)">Bekasi</button>
+                </div>
+                <p class="results-info">Showing <span id="count">17</span> therapists</p>
+            </section>
+
+            <div class="notice-box">
+                <strong>Please Note:</strong> This directory is for informational purposes. We recommend verifying credentials and insurance coverage before scheduling appointments. Always consult with your healthcare provider for personalized recommendations.
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="therapist-grid" id="therapistGrid">
+
+                <!-- JAKARTA -->
+                <div class="therapist-card" data-region="jakarta">
+                    <img src="/assets/therapist/reza maulana.png" alt="Dr. Reza Maulana" class="profile-circle">
+                    <h3>dr. Reza Maulana, Sp.KJ</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Specializes in ASD diagnosis and behavioral therapy with 15+ years experience.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Pluit, Jakarta
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 123-4567
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            reza.maulana@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="jakarta">
+                    <img src="/assets/therapist/rizky mahendra.png" alt="Rizky Mahendra" class="profile-circle">
+                    <h3>Rizky Mahendra, M.Psi</h3>
+                    <span class="specialty-tag">Behavioral Therapist</span>
+                    <p class="card-desc">Applied Behavior Analysis (ABA) specialist for ASD.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Grogol, Jakarta
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 345-6789
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            rizky.mahendra@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="jakarta">
+                    <img src="/assets/therapist/sinta lestari.png" alt="Sinta Lestari" class="profile-circle">
+                    <h3>Sinta Lestari, Sp.KJ</h3>
+                    <span class="specialty-tag">Developmental therapy and ASD early intervention</span>
+                    <p class="card-desc">Applied Behavior Analysis (ABA) specialist for ASD.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Cibubur, Jakarta
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 678-9012
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            sinta.lestari@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BOGOR -->
+                <div class="therapist-card" data-region="bogor">
+                    <img src="/assets/therapist/arief nugraha.png" alt="Arief Nugraha" class="profile-circle">
+                    <h3>Arief Nugraha, M.Psi</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Behavioral therapy for ASD teenagers.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Bogor Tengah, Bogor
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (0251) 111-2233
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            arief.nugraha@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="bogor">
+                    <img src="/assets/therapist/lina wijayanti.png" alt="Lina Wijayanti" class="profile-circle">
+                    <h3>Lina Wijayanti, S.Ter.Ok</h3>
+                    <span class="specialty-tag">Occupational Therapist</span>
+                    <p class="card-desc">Sensory integration and motor skills therapy.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Cibinong, Bogor
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (0251) 444-5566
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            lina.wijayanti@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="bogor">
+                    <img src="/assets/therapist/putri anggraini.png" alt="Putri Anggraini" class="profile-circle">
+                    <h3>Putri Anggraini, S.Psi</h3>
+                    <span class="specialty-tag">Occupational Therapist</span>
+                    <p class="card-desc">Early intervention Applied Behavior Analysis (ABA) therapy for ASD.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Sentul, Bogor
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (0251) 666-7788
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            putri.anggraini@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="bogor">
+                    <img src="/assets/therapist/siska melati.png" alt="Siska Melati" class="profile-circle">
+                    <h3>Siska Melati, S.Psi</h3>
+                    <span class="specialty-tag">Behavioral Therapist</span>
+                    <p class="card-desc">ABA therapy and emotional regulation training.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Bogor Barat, Bogor
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (0251) 222-3344
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            siska.melati@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DEPOK -->
+                <div class="therapist-card" data-region="depok">
+                    <img src="/assets/therapist/anisa rahma.png" alt="Anisa Rahma" class="profile-circle">
+                    <h3>Anisa Rahma, S.Psi</h3>
+                    <span class="specialty-tag">Behavioral Therapist</span>
+                    <p class="card-desc">ABA therapy for patients with ASD.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Cimanggis, Depok
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (0251) 606-6677
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            anisa.rahma@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="depok">
+                    <img src="/assets/therapist/maria felicia.png" alt="Maria Felicia" class="profile-circle">
+                    <h3>Maria Felicia, S.Psi</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Behavioral disorder treatment for ASD.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Margonda, Depok
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 404-4455
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            maria.felicia@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="depok">
+                    <img src="/assets/therapist/tania kusuma.png" alt="Tania Kusuma" class="profile-circle">
+                    <h3>Tania Kusuma, M.Psi</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Social skills and communication therapy.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Limo, Depok
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 808-8899
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            tania.kusuma@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TANGERANG -->
+                <div class="therapist-card" data-region="tangerang">
+                    <img src="/assets/therapist/clara wijaya.png" alt="Clara Wijaya" class="profile-circle">
+                    <h3>Clara Wijaya, S.Ter.Ok</h3>
+                    <span class="specialty-tag">Occupational Therapist</span>
+                    <p class="card-desc">Motor skill development and sensory therapy.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            BSD, Tangerang
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 777-8899
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            clara.wijaya@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="tangerang">
+                    <img src="/assets/therapist/daniel setiawan.png" alt="Daniel Setiawan" class="profile-circle">
+                    <h3>Daniel Setiawan, S.Ter.Ok</h3>
+                    <span class="specialty-tag">Occupational Therapist</span>
+                    <p class="card-desc">Sensory integration and daily living skills therapy.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Cipondoh, Tangerang
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 303-3344
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            daniel.setiawan@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="tangerang">
+                    <img src="/assets/therapist/felicia hartono.png" alt="Felicia Hartono" class="profile-circle">
+                    <h3>Felicia Hartono, Sp.KJ</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Behavioral disorder management in ASD patients.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Tangerang Kota, Tangerang
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 202-2233
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            felicia.hartono@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BEKASI -->
+                <div class="therapist-card" data-region="bekasi">
+                    <img src="/assets/therapist/budi santoso.png" alt="Budi Santoso" class="profile-circle">
+                    <h3>Budi Santoso, M.Psi</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Cognitive and behavioral therapy for ASD teenagers.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Bekasi Barat, Bekasi
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 111-2233
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            budi.santoso@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="bekasi">
+                    <img src="/assets/therapist/maya sari.png" alt="Maya Sari" class="profile-circle">
+                    <h3>Maya Sari, Sp.KJ</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">ASD diagnosis and medication management.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Tambun, Bekasi
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 555-6677
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            maya.sari@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="bekasi">
+                    <img src="/assets/therapist/nadia putri.png" alt="Nadia Putri" class="profile-circle">
+                    <h3>Nadia Putri, M.Psi</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Social skill training for ASD patients.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Harapan Indah, Bekasi
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 333-4455
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            nadia.putri@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="therapist-card" data-region="bekasi">
+                    <img src="/assets/therapist/rian saputra.png" alt="Rian Saputra" class="profile-circle">
+                    <h3>Rian Saputra, M.Psi</h3>
+                    <span class="specialty-tag">Clinical Psychologist</span>
+                    <p class="card-desc">Emotional regulation therapy for ASD patients.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <img src="/assets/icons/location.png" class="contact-icon" alt="location">
+                            Cikarang, Bekasi
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/telephone.png" class="contact-icon" alt="phone">
+                            (021) 666-7788
+                        </div>
+                        <div class="contact-item">
+                            <img src="/assets/icons/email.png" class="contact-icon" alt="email">
+                            rian.saputra@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="/assets/icons/logo-mirai.png" alt="Mirai Logo">
+                    <div class="logo-text">
+                        <span>Mirai</span>
+                        <p class="brand-subtitle">Autism Online Learning</p>
+                    </div>
+                </div>
+                <p class="brand-desc">Supporting autism awareness, screening, and community connection.</p>
+            </div>
+            <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="screening.html">Autism Test</a></li>
+                        <li><a href="information.html">Information</a></li>
+                        <li><a href="therapists.html">Therapists</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p class="contact-item">
+                        <img src="/assets/icons/email.png" alt="Email">
+                        <span>support@mirai-autism.org</span>
+                    </p>
+                    <p class="contact-item">
+                        <img src="/assets/icons/telephone.png" alt="Phone">
+                        <span>+62 123-4567-8911</span>
+                    </p>
+                    <p class="contact-item">
+                        <img src="/assets/icons/location.png" alt="Location">
+                        <span>Jakarta Barat, Indonesia</span>
+                    </p>
+                </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mirai - Autism Online Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize count on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const total = document.querySelectorAll('.therapist-card').length;
+            document.getElementById('count').innerText = total;
+        });
+
+        function filterBy(region, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const cards = document.querySelectorAll('.therapist-card');
+            let count = 0;
+
+            cards.forEach(card => {
+                if (region === 'all' || card.dataset.region === region) {
+                    card.style.display = 'block';
+                    count++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('count').innerText = count;
+        }
+    </script>
+
+</body>
+</html>
