@@ -1,4 +1,3 @@
-/* --- GLOBAL & VARIABLES --- */
 :root {
     --primary-blue: #5B8EC4;
     --dark-blue: #2c3e50;
@@ -19,6 +18,7 @@ body {
     background-color: var(--light-bg);
     color: var(--dark-blue);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
@@ -27,7 +27,6 @@ body {
     padding: 0 20px;
 }
 
-/* --- HEADER & NAVBAR --- */
 header {
     position: sticky;      
     top: 0;
@@ -41,6 +40,7 @@ header {
     padding: 15px 5%;
     background: var(--white);
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    position: relative;
 }
 
 .logo {
@@ -51,6 +51,7 @@ header {
     font-size: 20px;
     color: black;
     text-decoration: none;
+    z-index: 1010;
 }
 
 .logo img { height: 35px; }
@@ -58,9 +59,11 @@ header {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 40px;
     margin: 0;
     padding: 0;
+    align-items: center;
+    transition: all 0.4s ease;
 }
 
 .nav-links a {
@@ -73,8 +76,7 @@ header {
 
 .nav-links a:hover { color: var(--primary-blue); }
 
-
-.nav-active{
+.nav-active {
     color: var(--dark-blue) !important;
     font-weight: 700 !important;
     padding: 6px 0;
@@ -91,14 +93,37 @@ header {
     font-size: 14px;
     transition: background 0.2s, transform 0.15s;
     white-space: nowrap;
+    text-align: center;
 }
 
 .btn-signin:hover {
     background-color: #4a78b0;
+    color: var(--white);
     transform: translateY(-1px);
 }
 
-/* --- FOOTER --- */
+.mobile-signin-li { display: none; }
+
+.menu-toggle { display: none; }
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 1010;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-blue);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 footer {
     padding: 50px 0 20px;
     border-top: 1px solid #eee;
@@ -163,7 +188,6 @@ footer {
     object-fit: contain; 
 }
 
-/* RESPONSIVITY */
 @media (max-width: 992px) {
     .nav-links { gap: 25px; }
 }
