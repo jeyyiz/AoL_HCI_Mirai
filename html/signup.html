@@ -1,58 +1,127 @@
-<!-- signup -->
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mirai - Sign Up</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Mirai</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-  <main class="auth-page">
-    <section class="auth-panel auth-welcome">
-      <div class="auth-logo">
-        <img src="logo-mirai.png" alt="Mirai Logo">
-      </div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/assets/icons/logo-mirai.PNG" alt="Mirai Logo">
+                <span>Mirai</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="screening.html">Autism Test</a></li>
+                <li><a href="information.html">Information</a></li>
+                <li><a href="therapists.html">Therapists</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="forum.html">Forum</a></li>
+            </ul>
+            <a href="signin.html" class="btn-signin">Sign In</a>
+        </nav>
+    </header>
 
-      <h3>Hi! Are you new here?</h3>
-      <h1>Create Your<br>Free Account</h1>
-    </section>
+    <main class="signin-main-content">
+        <div class="container-signin">
+            <div class="left-panel">
+                <div class="welcome-content">
+                    <div class="icon-circle">
+                        <img src="/assets/signInUp/logo-mirai-whiteBg.PNG" alt="Mirai Logo White Bg">
+                    </div>
+                    <h1>Hi, Are you new here?</h1>
+                    <h2>Create Your Free Account</h2>
+                </div>
+            </div>
 
-    <section class="auth-panel auth-form-panel">
-      <div class="question-card">
-        <h1>Sign up</h1>
+            <div class="right-panel">
+                <div class="form-container">
+                    <h1>Sign Up</h1>
+                    <form id="registerForm" novalidate>
+                        <div class="input-group" id="nameGroup">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Your full name">
+                            <small class="error-message">Error message</small>
+                        </div>
 
-        <p class="auth-switch">
-          Already have an account?
-          <a href="signin.html">Sign In</a>
-        </p>
+                        <div class="input-group" id="emailGroup">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="Your email">
+                            <small class="error-message">Error message</small>
+                        </div>
 
-        <form>
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname">
+                        <div class="input-group" id="passwordGroup">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Your password">
+                            <small class="error-message">Error message</small>
+                        </div>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
+                        <button type="submit" class="btn-submit">Sign Up</button>
+                    </form>
+                    
+                    <p class="signin-text">
+                        Already have an account? <a href="signin.html">Sign In</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
 
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password">
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">
+                    <img src="/assets/icons/logo-mirai.png" alt="Mirai Logo">
+                    <div class="logo-text">
+                        <span>Mirai</span>
+                        <p class="brand-subtitle">Autism Online Learning</p>
+                    </div>
+                </div>
+                <p class="brand-desc">Supporting autism awareness, screening, and community connection.</p>
+            </div>
+            <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="screening.html">Autism Test</a></li>
+                        <li><a href="information.html">Information</a></li>
+                        <li><a href="therapists.html">Therapists</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="forum.html">Forum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact Us</h4>
+                    <p class="contact-item">
+                        <img src="/assets/icons/email.png" alt="Email">
+                        <span>support@mirai-autism.org</span>
+                    </p>
+                    <p class="contact-item">
+                        <img src="/assets/icons/telephone.png" alt="Phone">
+                        <span>+62 123-4567-8911</span>
+                    </p>
+                    <p class="contact-item">
+                        <img src="/assets/icons/location.png" alt="Location">
+                        <span>Jakarta Barat, Indonesia</span>
+                    </p>
+                </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mirai - Autism Online Learning. All rights reserved.</p>
+        </div>
+    </footer>
 
-          <label class="terms-row">
-            <input type="checkbox" name="terms">
-            <span>I agree to Mirai's Terms of Service and Privacy Policy</span>
-          </label>
+    <div id="toastContainer" class="toast-container"></div>
 
-          <button type="submit" class="btn-next">
-            Create Account →
-          </button>
-        </form>
-      </div>
-    </section>
-  </main>
-
+    <script src="/js/signup.js"></script>
 </body>
 </html>
