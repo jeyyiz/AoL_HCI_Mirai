@@ -30,7 +30,7 @@
 .forum-header-left p  { margin: 4px 0 0; color: var(--gray-text); font-size: 0.9rem; }
 
 .btn-forum-new {
-    background-color: #6495ED;
+    background-color: var(--primary-blue);
     color: white;
     border: none;
     padding: 12px 25px;
