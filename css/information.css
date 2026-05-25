@@ -3,10 +3,6 @@
   min-height: 80vh;
 }
 
-.page-hero {
-  padding: 20px;
-}
-
 .hero-card {
   background: var(--white);
   padding: 35px;
