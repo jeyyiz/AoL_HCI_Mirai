@@ -11,6 +11,14 @@
     margin-bottom: 25px;
 }
 
+.forum-header-card h1 {
+    font-size: 32px;
+}
+
+.forum-header-card p {
+    font-size: 16px;
+}
+
 .forum-header-left { display: flex; align-items: center; gap: 15px; }
 
 .forum-icon {
