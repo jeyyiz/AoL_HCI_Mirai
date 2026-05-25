@@ -10,11 +10,15 @@
 
 .news-info { display: flex; align-items: center; gap: 20px; }
 
+.news-info h1{
+    font-size: 32px;
+}
+
 .icon-circle-large {
     width: 60px;
     height: 60px;
     background: #5B8EC4;
-    border-radius: 12px;
+    border-radius: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
